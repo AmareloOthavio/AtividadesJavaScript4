@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vetor = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+        var par = []
+        var impar = []
+
+        for (numero in vetor) {
+            if (numero % 2 == 0) {
+                par.push(numero)
+            }
+            else {
+                impar.push(numero)
+            }
+        }
+
+        alert("Pares: "+pares +" Ímpares: "+impar)
+    </script>
+</body>
+</html>
