@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = prompt("Insira o nome do jogador")
+        
+        if (nome) {
+            let saltos = []
+            for (let i = 0;i<5;i+=1) {
+                saltos.push(parseFloat(prompt("Insira o valor do salto "+ (i+1))))
+            }
+            let soma = 0
+            for (pos in saltos) {
+                soma += saltos[pos]
+            }
+            let media = soma/saltos.length
+            alert("Atleta: "+nome+"\n"+"Primeiro salto: "+saltos[0]+" m\nSegundo salto: "+saltos[1]+" m\nTerceiro salto: "+saltos[2]+" m\nQuarto salto: "+saltos[3]+" m\nQuinto salto: "+saltos[4]+" m\nMédia: "+media+" m")
+        }
+    </script>
+</body>
+</html>

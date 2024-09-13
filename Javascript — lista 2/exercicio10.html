@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vetor1 = []
+        var vetor2 = []
+        var vetor3 = []
+
+        // Pegando os valores do vetor 1
+        for (let i = 1;i <11; i +=1) {
+            valorNovo = parseFloat(prompt("Insira um valor para inserir ele no vetor 1"))
+            vetor1.push(valorNovo)
+        }
+
+        // Agora com o vetor 2
+        for (let i = 1;i <11; i +=1) {
+            valorNovo = parseFloat(prompt("Insira um valor para inserir ele no vetor 2"))
+            vetor2.push(valorNovo)
+        }
+
+        //Agora intercalando
+        for (let i = 0;i <10; i +=1) {
+            vetor3.push(vetor1[i])
+            vetor3.push(vetor2[i])
+        }
+        alert("Olha o que eu fiz com os vetores 1 e 2😱: "+vetor3)
+    </script>
+</body>
+</html>

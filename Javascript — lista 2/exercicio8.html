@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valoresPessoas = [[],[],[],[],[]]
+
+        var contador = 1
+        var valorASerAdicionado = 0
+
+        for (pessoa in valoresPessoas) {
+
+                valorASerAdicionado = parseFloat(prompt("Valor da altura da pessoa "+contador+": "))
+                valoresPessoas[pessoa].push(valorASerAdicionado)
+
+                valorASerAdicionado = parseInt(prompt("Valor da idade da pessoa "+contador+": "))
+                valoresPessoas[pessoa].push(valorASerAdicionado)
+
+            contador += 1
+        }
+
+        contador = 1
+        for (pessoa in valoresPessoas) {
+            alert("Idade e altura na ordem inversa da pessoa "+contador+": "+valoresPessoas[pessoa].reverse())
+            contador += 1
+            
+        }
+    </script>
+</body>
+</html>
