@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vetor = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez']
+        var listaConsoantes = []
+        var numConsoantes = 0
+
+        for (palavra in vetor) {
+            let consoantes = vetor[palavra].match(/[bcdfghjklmnpqrstvwxyz]/gi)
+            listaConsoantes.push(consoantes)
+            numConsoantes += consoantes.length
+        }
+
+
+        alert("Quantidade de consoantes: "+numConsoantes+" | Consoantes encontradas: "+listaConsoantes)
+    </script>
+</body>
+</html>

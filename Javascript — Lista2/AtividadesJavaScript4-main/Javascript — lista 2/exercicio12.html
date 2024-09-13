@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Os alunos vão ser os índices da lista principal
+        // A idade é o primeiro valor de cada lista, enquanto a altura é o segundo
+        var matrizAlunos = [[16,120],[14,180],[10,170],[14,160],[15,167],[16,176],[13,178],[12,181],[10,170],[10,160],[17,185],[14,170],[12,167],[13,150],[15,180],[12,160],[11,160],[10,178],[15,179],[14,166],[13,170],[12,160],[14,168],[12,176],[14,170],[13,169],[15,170],[16,170],[13,160],[15,168]]
+        var maisDe13MaisBaixoQueMedia = 0
+        var soma = 0
+        var media = 0
+
+        //Primeiro laço somente para cálculo de média
+        for (aluno in matrizAlunos) {
+            soma += matrizAlunos[aluno][1]
+        }
+        media = soma/matrizAlunos.length
+
+        //Segundo laço é para verificar cada aluno e contabilizar
+        for (aluno in matrizAlunos) {
+            for (valor in matrizAlunos[aluno]) {
+                if  (matrizAlunos[aluno][0] > 13 && matrizAlunos[aluno][1] < media) {
+                    maisDe13MaisBaixoQueMedia += 0.5
+                    // Somei 0.5 ao invés de 1 porque isso roda duas vezes dentro de aluno, já que aluno tem dois valores
+                }
+            }
+        }
+
+        alert("Quantidade de alunos que têm 13 anos e altura abaixo da média: "+maisDe13MaisBaixoQueMedia)
+    </script>
+</body>
+</html>

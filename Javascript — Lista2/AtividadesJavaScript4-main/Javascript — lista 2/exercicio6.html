@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Os alunos vão ser os índices da lista principal
+        // Suas notas vão ser os valores dentro de cada lista secundária
+        var notas = [[1,7,7,7],[2,6,6,4],[3,3,3,7],[4,6,5,4],[5,4,4,4],[6,8,9,10],[7,7,7,7],[8,1,1,1],[9,8,7,10],[10,6,3,2]]
+        // 17 maiores ou iguais a 7 no total
+        var notasBoas = 0
+        var contador = 0
+
+        for (aluno in notas) {
+            for (nota in notas[aluno]) {
+                if  (notas[aluno][contador] >= 7) {
+                    notasBoas += 1
+                }
+                contador += 1
+            }
+            contador = 0
+        }
+
+        alert("Quantidade de notas maiores ou iguais a 7: "+notasBoas)
+    </script>
+</body>
+</html>
